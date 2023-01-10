@@ -74,6 +74,12 @@ hr{
 
       }
     }
+    @media screen and (max-width: 400px) {
+      .navbar{
+        width: 50%; /* Establecemos el ancho del elemento en el 50% para que se vea centrado */
+        margin: auto; /* Aplicamos la propiedad margin: auto para centrar el elemento */
+      }
+    }
       .navbar-brand{
         display: flex;
         flex-direction: column;
@@ -89,6 +95,12 @@ hr{
         .navbar-brand{
           flex-direction: row;
           margin-bottom: 0;
+        }
+      }
+      @media screen and (max-width: 400px) {
+        .navbar-brand {
+          width: 50%; /* Establecemos el ancho del elemento en el 50% para que se vea centrado */
+          margin: auto; /* Aplicamos la propiedad margin: auto para centrar el elemento */
         }
       }
       .navbar-brand img{
@@ -115,6 +127,7 @@ hr{
           gap: 1em;
         }
       }
+
       .main{
         background-color: white;
         padding: 0.3em;
@@ -164,12 +177,18 @@ hr{
 form {
   font-family: sans-serif;
   font-size: 16px;
+  width: 50%; /* Establecemos el ancho del formulario en el 50% */
+  margin: auto; /* Aplicamos la propiedad margin: auto para centrar el formulario */
+}
+.body{
+  background-image: linear-gradient(to right, #000080, #FFFF00); /* Fondo degradado desde azul oscuro hasta amarillo claro */
 }
 
 .label {
   display: block;
   margin-top: 0.5em;
   font-weight: 700;
+  color: wheat;
 }
 
 .form-text {
@@ -179,7 +198,9 @@ form {
   border-radius: 4px;
   transition: all 0.2s ease-in-out;
 }
-
+.white-letters{
+  color: white;
+}
 form textarea {
   height: 150px;
 }
@@ -193,6 +214,7 @@ form button {
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   width: 90%;
+  
 }
 
 form button:hover {
@@ -213,6 +235,12 @@ form button:hover {
       width: 82%;
   }
 }
+@media screen and (max-width: 400px) {
+  form{
+    width: 50%; /* Establecemos el ancho del elemento en el 50% para que se vea centrado */
+    margin: auto; /* Aplicamos la propiedad margin: auto para centrar el elemento */
+  }
+}
 
 
 
@@ -230,7 +258,7 @@ footer {
   margin-right: auto;
   margin-left: auto;
   border-radius: 10px;
-  margin-top: 10px;
+  margin-top: 5px;
 
 }
 
@@ -264,6 +292,12 @@ footer {
     gap: 1em;
   }
 }
+@media screen and (max-width: 400px) {
+  footer {
+    display: flex;
+    gap: 1em;
+  }
+}
 
 .warning{
   font-weight: 700;
@@ -272,3 +306,4 @@ footer {
   color: red;
   
 }
+
