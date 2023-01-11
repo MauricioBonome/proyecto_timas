@@ -30,15 +30,9 @@ html {
         background-color: #003566;
     }
     
-    .btn-info {
-        color: black;
-        background-color: #DDF2CE;
-    }
+
     
-    .btn-dark {
-        color: white;
-        background-color: #45453C;
-    }
+
     .btn-danger:hover{
       background-color: wheat;
       color: black;
@@ -97,12 +91,8 @@ hr{
           margin-bottom: 0;
         }
       }
-      @media screen and (max-width: 400px) {
-        .navbar-brand {
-          width: 50%; /* Establecemos el ancho del elemento en el 50% para que se vea centrado */
-          margin: auto; /* Aplicamos la propiedad margin: auto para centrar el elemento */
-        }
-      }
+
+      
       .navbar-brand img{
         width: 2em;
       }
@@ -118,7 +108,7 @@ hr{
       }
       .nav-link:hover{
         background-color: white;
-        color: wheat;
+        color: rgb(14, 2, 66);
         border-radius: 0.5em;
       }
       @media (min-width:768px){
@@ -175,20 +165,42 @@ hr{
 /*formulario*/
 
 form {
-  font-family: sans-serif;
+  font-family: "Rufina",sans-serif;
+  font-weight: 700;
   font-size: 16px;
-  width: 50%; /* Establecemos el ancho del formulario en el 50% */
-  margin: auto; /* Aplicamos la propiedad margin: auto para centrar el formulario */
+  display: block;
+  margin: 0 auto;
+  width: 80%;/* Aplicamos la propiedad margin: auto para centrar el formulario */
 }
-.body{
-  background-image: linear-gradient(to right, #000080, #FFFF00); /* Fondo degradado desde azul oscuro hasta amarillo claro */
+.bg-body {
+  background: linear-gradient(to right, #8e44ad, #3498db);
+  animation: gradient 15s ease infinite;
+}
+.container-form {
+  width: 80%;
+  margin: 0 auto;
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .label {
   display: block;
   margin-top: 0.5em;
   font-weight: 700;
-  color: wheat;
+  color: rgb(10, 7, 0);
 }
 
 .form-text {
@@ -218,8 +230,12 @@ form button {
 }
 
 form button:hover {
-  background-color: blue;
+  background-color: rgb(14, 2, 66);
   
+}
+.form-h2{
+  font-family: "rufina",sans-serif;
+  font-weight: 700;
 }
 
 
@@ -298,12 +314,43 @@ footer {
     gap: 1em;
   }
 }
-
-.warning{
-  font-weight: 700;
-  font-family: "Rufina", sans-serif;
-  font-size: 2rem;
-  color: red;
-  
+/*E-mail enviado*/
+.card-saludo{
+  width: 50%;
+  display: block;
+  margin: 0 auto;
 }
 
+.h2{
+  font-weight: 700;
+  font-family: "Rufina",sans-serif;
+  text-align: center;
+
+}
+.blinking-text {
+  animation: blink 1s linear infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.hidden-text {
+  visibility: hidden;
+}
+.saludo {
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    color:#003566 ;
+  
+  
+}

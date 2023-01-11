@@ -16,11 +16,11 @@ form.addEventListener("submit", e => {
     }
     console.log(regexEmail.test(email.value))
     if(!regexEmail.test(email.value)){
-        alert(`Hola, ${name}. ¡Tu E-mail no es valido intenta nuevamente !`)
+        alert(` ¡Tu E-mail no es valido intenta nuevamente !`)
         entrar = true
     }
     if(textarea.value.length <2){
-        alert(`Hola, ${name}. ¡Hola Deja un mensaje para que podamos ayudarte!`)
+        alert(` ¡Hola Deja un mensaje para que podamos ayudarte!`)
         entrar = true
     }
     if(entrar){
