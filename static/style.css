@@ -61,14 +61,14 @@ hr{
         align-items: center;
 
       }
-    @media(min-width: 768px){
+    @media(min-width: 1000px){
       .navbar {
         flex-direction: row;
         justify-content: space-between ;
 
       }
     }
-    @media screen and (max-width: 400px) {
+    @media screen and (max-width: 527px) {
       .navbar{
         width: 50%; /* Establecemos el ancho del elemento en el 50% para que se vea centrado */
         margin: auto; /* Aplicamos la propiedad margin: auto para centrar el elemento */
@@ -248,12 +248,12 @@ form button:hover {
     width: 80%;
   }
   form button {
-      width: 82%;
+      width: 80%;
   }
 }
 @media screen and (max-width: 400px) {
   form{
-    width: 50%; /* Establecemos el ancho del elemento en el 50% para que se vea centrado */
+    width: 80%; /* Establecemos el ancho del elemento en el 50% para que se vea centrado */
     margin: auto; /* Aplicamos la propiedad margin: auto para centrar el elemento */
   }
 }
@@ -353,4 +353,64 @@ footer {
     color:#003566 ;
   
   
+}
+
+/*programas*/
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /*permite que las tarjetas se envuelvan en dispositivos más pequeños */
+}
+
+
+.card-proyectos {
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+  opacity: 0;
+  animation: appear 1s ease-in-out forwards;
+
+  width: 300px;
+  height: auto;
+}
+
+.card-1 {
+  animation-delay: 0.5s;
+}
+.card-2 {
+  animation-delay: 1s;
+}
+.card-3 {
+  animation-delay: 1.5s;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1100px) {
+  .card {
+    width: 100%; /*Cambiando el ancho a 100%*/
+    box-shadow: none;
+    margin-top: 1rem;
+    
+  }
+}
+
+/*header proyectos */
+
+.title {
+  font-size: 3em;
+  color: #003566;
+  transition: color 0.5s ease-in-out;
+  position: relative; /* o absolute */
+  width: 100%;
+  text-align: center;
+}
+
+.title:hover {
+  color: #ffa600; /*color al pasar el mouse por encima*/
 }
